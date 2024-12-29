@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>İletişim</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        .contact-info {
+            transform: translateY(20px);
+            opacity: 0;
+            animation: slideIn 0.5s ease forwards;
+        }
+
+        .info-item {
+            transition: transform 0.3s ease;
+        }
+
+        .info-item:hover {
+            transform: translateX(10px);
+            background-color: #f8f9fa;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .form-container {
+            transform: translateY(30px);
+            opacity: 0;
+            animation: slideIn 0.5s ease forwards 0.3s;
+        }
+
+        @keyframes slideIn {
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        button {
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        button:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background: rgba(255,255,255,0.2);
+            transition: width 0.3s ease;
+        }
+
+        button:hover:after {
+            width: 100%;
+        }
+
+        .success-message {
+            display: none;
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 20px;
+            text-align: center;
+            animation: fadeIn 0.5s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #007bff;
+            box-shadow: 0 0 5px rgba(0,123,255,0.3);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Ana Sayfa</a></li>
+                <li><a href="about.html">Hakkımda</a></li>
+                <li><a href="reference.html">Referanslar</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html" class="active">İletişim</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>İletişim</h1>
+        
+        <!-- İletişim Bilgileri Bölümü -->
+        <div class="contact-info">
+            <h2>İletişim Bilgilerim</h2>
+            <div class="info-item">
+                <i class="fas fa-user"></i>
+                <p><strong>Ad Soyad:</strong> [Mert Doğanay]</p>
+            </div>
+            <div class="info-item">
+                <i class="fas fa-phone"></i>
+                <p><strong>Telefon:</strong> <a href="tel:+905334727561">+90 533 472 75 61</a></p>
+            </div>
+            <div class="info-item">
+                <i class="fas fa-envelope"></i>
+                <p><strong>E-posta:</strong> <a href="mailto:[mertdoganay437@gmail.com]">[mertdoganay437@gmail.com]</a></p>
+            </div>
+        </div>
+
+        <div class="form-container">
+            <h2>Bana Mesaj Gönderin</h2>
+            <form>
+                <div class="form-group">
+                    <label for="name">Ad Soyad:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">E-posta:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Mesaj:</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+                <button type="submit">Gönder</button>
+            </form>
+        </div>
+
+        <div class="success-message" id="successMessage">
+            Mesajınız başarıyla gönderildi!
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Tüm hakları saklıdır.</p>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.querySelector('form');
+            const successMessage = document.getElementById('successMessage');
+
+            // Form gönderimi
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Form verilerini al
+                const formData = new FormData(form);
+                const name = formData.get('name');
+                const email = formData.get('email');
+                const message = formData.get('message');
+
+                // Form kontrolü
+                if (name && email && message) {
+                    // Başarılı mesajını göster
+                    successMessage.style.display = 'block';
+                    
+                    // Formu temizle
+                    form.reset();
+
+                    // 3 saniye sonra mesajı gizle
+                    setTimeout(() => {
+                        successMessage.style.display = 'none';
+                    }, 3000);
+                }
+            });
+
+            // Input alanları için animasyon
+            const inputs = document.querySelectorAll('input, textarea');
+            inputs.forEach(input => {
+                input.addEventListener('focus', function() {
+                    this.parentElement.style.transform = 'translateX(10px)';
+                });
+
+                input.addEventListener('blur', function() {
+                    this.parentElement.style.transform = 'translateX(0)';
+                });
+            });
+
+            // İletişim bilgileri için hover efekti
+            const infoItems = document.querySelectorAll('.info-item');
+            infoItems.forEach(item => {
+                item.addEventListener('mouseenter', function() {
+                    this.style.backgroundColor = '#f8f9fa';
+                });
+
+                item.addEventListener('mouseleave', function() {
+                    this.style.backgroundColor = 'transparent';
+                });
+            });
+        });
+    </script>
+</body>
+</html> 

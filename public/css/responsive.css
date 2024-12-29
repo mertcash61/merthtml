@@ -1,0 +1,51 @@
+/* Mobil Öncelikli (Mobile First) Yaklaşım */
+
+/* Temel stiller (mobil) */
+.container {
+    width: 100%;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+.grid {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr;
+}
+
+/* Tablet (768px ve üzeri) */
+@media (min-width: 768px) {
+    .container {
+        max-width: 720px;
+    }
+
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hide-mobile {
+        display: block;
+    }
+}
+
+/* Laptop (992px ve üzeri) */
+@media (min-width: 992px) {
+    .container {
+        max-width: 960px;
+    }
+
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Masaüstü (1200px ve üzeri) */
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    }
+
+    .grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+} 

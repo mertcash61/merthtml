@@ -1,0 +1,28 @@
+:root {
+    --java-blue: #5382A1;
+    --java-red: #E76F00;
+}
+
+body {
+    font-family: 'JetBrains Mono', monospace;
+    margin: 0;
+    background-color: #f8f8f8;
+}
+
+header {
+    background-color: var(--java-blue);
+    color: white;
+    padding: 1rem;
+}
+
+.code-example {
+    background-color: #2B2B2B;
+    color: #A9B7C6;
+    padding: 1.5rem;
+    border-radius: 5px;
+    margin: 1rem;
+}
+
+.code-example pre {
+    margin: 0;
+} 

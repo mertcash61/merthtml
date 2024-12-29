@@ -1,0 +1,41 @@
+:root {
+    --js-yellow: #F7DF1E;
+    --js-black: #323330;
+}
+
+body {
+    font-family: 'Fira Code', monospace;
+    margin: 0;
+    background-color: #1E1E1E;
+    color: #fff;
+}
+
+header {
+    background-color: var(--js-yellow);
+    padding: 1rem;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.framework-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    padding: 2rem;
+}
+
+.framework-card {
+    background-color: var(--js-black);
+    padding: 2rem;
+    border-radius: 8px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.framework-card:hover {
+    transform: translateY(-5px);
+} 

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hakkımda</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <style>
+        .about-section {
+            transform: translateY(30px);
+            opacity: 0;
+            animation: slideIn 0.5s ease forwards;
+        }
+
+        @keyframes slideIn {
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .info-card {
+            transition: all 0.3s ease;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .info-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .bio-section {
+            padding: 20px;
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            margin-top: 20px;
+        }
+
+        .bio-section:hover {
+            background-color: #fff;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        h1, h2, h3 {
+            position: relative;
+            display: inline-block;
+            color: #333;
+            margin-bottom: 1rem;
+        }
+
+        h1:after, h2:after, h3:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: #333;
+            transition: width 0.3s ease;
+        }
+
+        h1:hover:after, h2:hover:after, h3:hover:after {
+            width: 100%;
+        }
+
+        .personal-info {
+            display: grid;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .skill-section {
+            margin-top: 2rem;
+        }
+
+        .skill-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            list-style: none;
+            padding: 0;
+        }
+
+        .skill-item {
+            background-color: #fff;
+            padding: 1rem;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+
+        .skill-item:hover {
+            transform: translateX(10px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Ana Sayfa</a></li>
+                <li><a href="about.html" class="active">Hakkımda</a></li>
+                <li><a href="reference.html">Referanslar</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">İletişim</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="about-section">
+            <h1>Hakkımda</h1>
+            
+            <article class="about-content">
+                <div class="personal-info">
+                    <div class="info-card">
+                        <h3>Kişisel Bilgiler</h3>
+                        <ul>
+                            <li><strong>Ad Soyad:</strong> [Adınız Soyadınız]</li>
+                            <li><strong>Doğum Tarihi:</strong> [25/04/2007]</li>
+                            <li><strong>Doğum Yeri:</strong> [Marmaris/Muğla]</li>
+                            <li><strong>Yaşadığı Şehir:</strong> [Marmaris/Muğla]</li>
+                            <li><strong>E-posta:</strong> [E-posta adresiniz]</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="bio-section">
+                        <h3>Özgeçmiş</h3>
+                        <p>
+                            [Buraya kısa özgeçmişinizi yazabilirsiniz. Örneğin:]
+                        </p>
+                        <p>
+                            [25/04/2007] tarihinde [Muğla] şehrinde dünyaya geldim. 
+                            İlk ve orta öğrenimimi [Okul adları] okullarında tamamladım.
+                            Şu anda [Okul/Üniversite adı]'nda eğitimime devam ediyorum.
+                        </p>
+                    </div>
+
+                    <div class="skill-section">
+                        <h3>Yetenekler</h3>
+                        <ul class="skill-list">
+                            <li class="skill-item">HTML5 & CSS3</li>
+                            <li class="skill-item">JavaScript</li>
+                            <li class="skill-item">Python</li>
+                            <li class="skill-item">Java</li>
+                            <li class="skill-item">SQL</li>
+                            <li class="skill-item">Git</li>
+                        </ul>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Tüm hakları saklıdır.</p>
+    </footer>
+</body>
+</html> 

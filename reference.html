@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Referanslar</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .reference-section {
+            transform: translateY(30px);
+            opacity: 0;
+            animation: slideIn 0.5s ease forwards;
+        }
+
+        @keyframes slideIn {
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .reference-item {
+            padding: 20px;
+            margin: 10px 0;
+            border-radius: 8px;
+            background-color: #f8f9fa;
+            transition: all 0.3s ease;
+        }
+
+        .reference-item:hover {
+            transform: translateX(10px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            background-color: #fff;
+        }
+
+        h1 {
+            position: relative;
+            display: inline-block;
+        }
+
+        h1:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: #333;
+            transition: width 0.3s ease;
+        }
+
+        h1:hover:after {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Ana Sayfa</a></li>
+                <li><a href="about.html">Hakkımda</a></li>
+                <li><a href="reference.html" class="active">Referanslar</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">İletişim</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="reference-section">
+            <h1>Referanslar</h1>
+            <div class="reference-item">
+                <p>Referanslar sayfası içeriği buraya gelecek.</p>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Tüm hakları saklıdır.</p>
+    </footer>
+</body>
+</html> 

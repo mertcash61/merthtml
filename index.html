@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ana Sayfa</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .content-section {
+            transform: translateY(30px);
+            opacity: 0;
+            animation: slideIn 0.5s ease forwards;
+        }
+
+        @keyframes slideIn {
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        main h1 {
+            position: relative;
+            display: inline-block;
+        }
+
+        main h1:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: #333;
+            transition: width 0.3s ease;
+        }
+
+        main h1:hover:after {
+            width: 100%;
+        }
+
+        p {
+            line-height: 1.8;
+            transition: transform 0.3s ease;
+        }
+
+        p:hover {
+            transform: translateX(10px);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="active">Ana Sayfa</a></li>
+                <li><a href="about.html">Hakkımda</a></li>
+                <li><a href="reference.html">Referanslar</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">İletişim</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="content-section">
+            <h1>Hoş Geldiniz</h1>
+            <p>Ana sayfa içeriği buraya gelecek.</p>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Tüm hakları saklıdır.</p>
+    </footer>
+</body>
+</html> 

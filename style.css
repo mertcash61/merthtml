@@ -1,0 +1,175 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #333;
+    padding: 1rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+nav ul li a.active {
+    color: #ffd700;
+}
+
+main {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+h1 {
+    margin-bottom: 1rem;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* İletişim formu stilleri */
+.form-group {
+    margin-bottom: 1rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+textarea {
+    height: 150px;
+}
+
+button {
+    background-color: #333;
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+/* İletişim sayfası için ek stiller */
+.contact-info {
+    background-color: #f5f5f5;
+    padding: 2rem;
+    border-radius: 5px;
+    margin-bottom: 2rem;
+}
+
+.contact-info h2 {
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.info-item {
+    margin: 1rem 0;
+    display: flex;
+    align-items: center;
+}
+
+.info-item i {
+    margin-right: 1rem;
+    color: #333;
+}
+
+.info-item a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.info-item a:hover {
+    text-decoration: underline;
+}
+
+.form-container {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.form-container h2 {
+    margin-bottom: 1.5rem;
+    color: #333;
+}
+
+/* Blog sayfası stilleri */
+.blog-post {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin-bottom: 2rem;
+}
+
+.personal-info {
+    margin-top: 2rem;
+}
+
+.info-card {
+    background-color: #f5f5f5;
+    padding: 1.5rem;
+    border-radius: 5px;
+    margin-bottom: 2rem;
+}
+
+.info-card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.info-card li {
+    margin: 1rem 0;
+    font-size: 1.1rem;
+}
+
+.bio-section {
+    line-height: 1.8;
+}
+
+.bio-section h3 {
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.bio-section p {
+    margin-bottom: 1.5rem;
+    text-align: justify;
+} 

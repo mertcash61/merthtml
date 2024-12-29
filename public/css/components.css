@@ -1,0 +1,60 @@
+/* Kartlar */
+.custom-card {
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.custom-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Butonlar */
+.custom-btn {
+    padding: 10px 20px;
+    border-radius: 25px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-primary-custom {
+    background: linear-gradient(45deg, #4a90e2, #67b26f);
+    color: white;
+}
+
+.btn-secondary-custom {
+    background: linear-gradient(45deg, #606c88, #3f4c6b);
+    color: white;
+}
+
+/* Form Elemanları */
+.custom-input {
+    border: 2px solid #eee;
+    border-radius: 8px;
+    padding: 10px 15px;
+    transition: border-color 0.3s ease;
+}
+
+.custom-input:focus {
+    border-color: #4a90e2;
+    outline: none;
+}
+
+/* Badges */
+.custom-badge {
+    padding: 5px 10px;
+    border-radius: 12px;
+    font-size: 0.8em;
+}
+
+.badge-success {
+    background-color: #67b26f;
+    color: white;
+}
+
+.badge-warning {
+    background-color: #f1c40f;
+    color: white;
+} 
